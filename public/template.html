@@ -7,7 +7,34 @@
 </head>
 
 <body>
-    <h1>Hello world</h1>
+    <div id="floating-panel">
+        <b>Start: </b>
+        <select id="start">
+            <option value="none" selected disabled hidden>Select an Option</option>
+            <option value="heathrow airport">Heathrow Airport</option>
+            <option value="100 Warwick Way, central London, england">AirBnB</option>
+            <option value="buckingham london, england">Buckingham Palace</option>
+            <option value="westminster abbey London, england">Westminster Abbey</option>
+            <option value="big ben London, england">Big Ben</option>
+            <option value="51.502257,-0.126995">Imperial Churchill</option>
+        </select>
+        <b>End: </b>
+        <select id="end">
+            <option value="none" selected disabled hidden>Select an Option</option>
+            <option value="heathrow airport">Heathrow Airport</option>
+            <option default value="100 Warwick Way, central London, england">AirBnB</option>
+            <option value="Buckingham London, england">Buckingham Palace</option>
+            <option value="westminster abbey London, england">Westminster Abbey</option>
+            <option value="big ben London, england">Big Ben</option>
+            <option value="51.502257,-0.126995">Imperial Churchill</option>
+        </select>
+    </div>
+    <div id="map"></div>
+    &nbsp;
+    <div id="warnings-panel"></div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiyMWQ4DB22BRQMKjt-VpycC3i-Tc9TqY&callback=initMap&v=weekly"
+        defer></script>
 </body>
 
 </html>
