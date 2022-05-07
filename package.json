@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "npx webpack serve -c webpack.dev"
+    "dev": "npx webpack serve -c webpack.dev --stats-children --stats-error-details"
   },
   "babel": {
     "presets": [
@@ -18,6 +18,8 @@
     "@babel/preset-env": "^7.17.10",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
+    "dotenv": "^16.0.0",
+    "dotenv-webpack": "^7.1.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",

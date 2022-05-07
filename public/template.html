@@ -32,9 +32,7 @@
     <div id="map"></div>
     &nbsp;
     <div id="warnings-panel"></div>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiyMWQ4DB22BRQMKjt-VpycC3i-Tc9TqY&callback=initMap&v=weekly"
-        defer></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=<%= htmlWebpackPlugin.options.environment %>&callback=initMap&v=weekly" defer></script>
 </body>
 
 </html>

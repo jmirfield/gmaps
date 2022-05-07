@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+require('dotenv').config({ path: './.env' });
 
 module.exports = {
     entry: './src/index.js',
@@ -21,11 +23,19 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['*', '.js']
+        extensions: ['*', '.js'],
+        fallback: {
+            "fs": false,
+            "os": false,
+            "path": false
+        },
+
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/template.html',
+            inject: 'body',
+            environment: process.env.GMAP_API
         }),
     ],
 };
